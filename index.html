@@ -243,7 +243,9 @@ async function getAnswer(text){
   try {
     const r = await fetch("https://topper-x-backend.onrender.com/ask",{
       method:"POST",
-      headers:{'Content-Type':'application/json'},
+  headers: {
+  "Content-Type": "application/json"
+},
       body:JSON.stringify({q:text})
     });
     const d = await r.json();
